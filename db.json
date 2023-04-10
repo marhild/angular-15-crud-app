@@ -1,0 +1,33 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "employees": [
+    {
+      "firstName": "Lorem",
+      "lastName": "Entry",
+      "email": "hildebrandt.maria@gmail.com",
+      "dateOfBirth": "2023-04-12T22:00:00.000Z",
+      "gender": "female",
+      "education": "Diploma",
+      "experience": "4",
+      "company": "wer",
+      "package": "4",
+      "id": 1
+    }
+  ]
+}
