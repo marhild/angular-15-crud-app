@@ -40,18 +40,6 @@
       "company": "wer",
       "package": "12",
       "id": 2
-    },
-    {
-      "firstName": "Softwareentwickler",
-      "lastName": "Entry",
-      "email": "hildebrandt.maria@gmail.com",
-      "dateOfBirth": "2023-04-13T22:00:00.000Z",
-      "gender": "male",
-      "education": "Diploma",
-      "experience": "13",
-      "company": "wer",
-      "package": "12",
-      "id": 3
     }
   ]
 }
