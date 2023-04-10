@@ -12,7 +12,19 @@ import {MatTableDataSource} from '@angular/material/table';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  displayedColumns: string[] = ['id','firstName', 'lastName', 'email', 'dateOfBirth', 'gender', 'education', 'experience', 'company', 'package'];
+  displayedColumns: string[] = [
+    'id',
+    'firstName', 
+    'lastName', 
+    'email', 
+    'dateOfBirth', 
+    'gender', 
+    'education', 
+    'experience', 
+    'company', 
+    'package',
+    'action'
+  ];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -48,6 +60,18 @@ export class AppComponent implements OnInit{
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  deleteEmployee(id: number) {
+    this._empService.deleteEmployee(id).subscribe({
+      next: (res) => {
+        alert('Employee deleted!');
+        this.getEmployeeList();
+      },
+      error: (err) => {
+        console.log(err)
+      }
+    })
   }
 }
 
