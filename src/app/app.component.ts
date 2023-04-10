@@ -6,6 +6,7 @@ import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 import { CoreService } from './core/core.service';
+import { DeleteModalComponent } from './delete-modal/delete-modal.component';
 
 @Component({
   selector: 'app-root',
@@ -51,6 +52,19 @@ export class AppComponent implements OnInit{
     })
   }
 
+  openDeleteModal(data: any) {
+    const dialogRef = this._dialog.open(DeleteModalComponent, {
+      data, 
+    });
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val) {
+          this.getEmployeeList();
+        }
+      }
+    })
+  }
+
   getEmployeeList() {
     this._empService.getEmployeeList().subscribe({
       next: (res) => {
@@ -73,17 +87,6 @@ export class AppComponent implements OnInit{
     }
   }
 
-  deleteEmployee(id: number) {
-    this._empService.deleteEmployee(id).subscribe({
-      next: (res) => {
-        this._coreService.openSnackBar('Employee deleted!', 'done');
-        this.getEmployeeList();
-      },
-      error: (err) => {
-        console.log(err)
-      }
-    })
-  }
 
   openEditForm(data: any) {
     const dialogRef = this._dialog.open(EmpAddEditComponent, {

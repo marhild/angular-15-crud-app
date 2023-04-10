@@ -30,15 +30,15 @@
       "id": 1
     },
     {
-      "firstName": "Softwareentwickler",
+      "firstName": "Exx",
       "lastName": "Entry",
       "email": "hildebrandt.maria@gmail.com",
-      "dateOfBirth": "2023-04-13T22:00:00.000Z",
-      "gender": "male",
+      "dateOfBirth": "2023-04-12T22:00:00.000Z",
+      "gender": "female",
       "education": "Diploma",
-      "experience": "3",
+      "experience": "4",
       "company": "wer",
-      "package": "12",
+      "package": "17",
       "id": 2
     }
   ]

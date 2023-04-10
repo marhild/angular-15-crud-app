@@ -1,0 +1,8 @@
+<div mat-dialog-title>
+    <h1>Employee Form</h1>
+</div>
+<div mat-dialog-content class="content"></div>
+<div mat-dialog-actions class="action">
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" type="submit" (click)="deleteEmployee()">Delete</button>
+</div>
