@@ -61,8 +61,9 @@
         </mat-form-field>
     </div>
 </div>
+<!--[mat-dialog-close] prevents adding an empty row on close-->
 <div mat-dialog-actions class="action">
-    <button mat-raised-button>Cancel</button>
+    <button mat-raised-button type="button" [mat-dialog-close]="false">Cancel</button>
     <button mat-raised-button color="primary" type="submit">Save</button>
 </div>
 </form>
